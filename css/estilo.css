@@ -1,18 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;1,500&display=swap'); 
+* {
+    margin: 0;
+    padding: 0;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;1,500&display=swap');
-
-.background-body {
+body {
     font-family: 'Urbanist', sans-serif;
     font-size: 30px;
     color: #fff;
     background: #D38312;
     background: -webkit-linear-gradient(to right, #A83279, #D38312);  
-    background: linear-gradient(to right, #A83279, #D38312);   
+    background: linear-gradient(to right, #A83279, #D38312);  
+    background-repeat: no-repeat;   
+   
 }
 
 .container {
     margin-top: 5%;
-    width: 700px
+    width: 700px;
+    height: 550px;
 }
 
 .titulo {
