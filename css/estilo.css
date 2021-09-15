@@ -5,13 +5,12 @@
 }
 
 body {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 30px;
+    font-family: 'Urbanist', sans-serif;    
     color: #fff;
-    background: #D38312;
-    background: -webkit-linear-gradient(to right, #A83279, #D38312);  
+    background: #525252;
+    /* background: -webkit-linear-gradient(to right, #A83279, #D38312);  
     background: linear-gradient(to right, #A83279, #D38312);  
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;    */
    
 }
 
@@ -48,4 +47,8 @@ body {
     color: #0f5132;
     margin-bottom: 30px;
 
+}
+
+label {
+    font-size: 20px;
 }
