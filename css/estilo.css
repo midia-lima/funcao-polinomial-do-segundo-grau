@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;1,500&display=swap');
+
+.background-body {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    background: #D38312;
+    background: -webkit-linear-gradient(to right, #A83279, #D38312);  
+    background: linear-gradient(to right, #A83279, #D38312);   
+}
+
+.container {
+    margin-top: 5%;
+    width: 700px
+}
+
+.titulo {
+    margin-bottom: 10%;
+}
+
+.form-control {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 0.6;
+    background-color: #000;
+    color: #ff0000 !important;
+    height: 50px;
+    font-size: 30px;
+}
+
+.mensagens {
+    margin-top: 5%;
+    font-size: 20px;
+    font-family: 'Arial Narrow', Arial, sans-serif;    
+}
+
+.msg-retorno {
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    color: #0f5132;
+    margin-bottom: 30px;
+
+}
