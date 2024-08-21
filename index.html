@@ -1,63 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/bootstrap.css">
-  <link rel="stylesheet" href="./css/estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Equação do Segundo Grau</title>
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
-<body class="background-body">
+<body>
   <div class="container">
+    <div>
+      <label for="valorA">Informe o valor de A:</label>
+      <input type="number" id="valorA" />
+    </div>
 
-    <div class="row">
-      <div class="titulo">
-        <h3 class="text-center">Função polinomial do 2° grau (função quadrática)</h3>
+    <div>
+      <label for="valorB">Informe o valor de B:</label>
+      <input type="number" id="valorB" />
+    </div>
+
+    <div>
+      <label for="valorC">Informe o valor de C:</label>
+      <input type="number" id="valorC" />
+    </div>
+
+    <div class="row mensagens">
+      <div role="alert" id="elemento1">
+        <p id="deltaMenorQueZero"></p>
+      </div>
+
+      <div role="alert" id="elemento2">
+        <p id="deltaIgualAZero"></p>
+      </div>
+
+      <div role="alert" id="elemento3">
+        <p id="deltaMaiorQueZero"></p>
       </div>
     </div>
 
-    <div class="row form-group">
-      <div class="col">
-        <label for="valorA">Informe o valor de A:</label>
-        <input type="number" class="form-control" id="valorA">
-      </div>
-      <div class="col">
-        <label for="valorB">Informe o valor de B:</label>
-        <input type="number" class="form-control" id="valorB">
-      </div>
-      <div class="col">
-        <label for="valorC">Informe o valor de C:</label>
-        <input type="number" class="form-control" id="valorC">
-      </div>
-      
-      <div class="row mensagens">
-        <div role="alert" id="elemento1">
-          <p id="deltaMenorQueZero"></p>
-        </div>
-
-        <div role="alert" id="elemento2">
-          <p id="deltaIgualAZero"></p>
-        </div>
-
-        <div role="alert" id="elemento3">
-          <p id="deltaMaiorQueZero"></p>
-        </div>
-
-      </div>
+    <div>
+      <button type="submit" id="botao">Calcular</button>
     </div>
 
-    <button type="submit" class="btn btn-primary" id="botao">Calcular</button>
+    
   </div>
 
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/jquery.mask.js"></script>
   <script src="./js/popper.min.js"></script>
-  <script src="./js/bootstrap.js"></script>
   <script src="./js/index.js"></script>
-
 </body>
 
 </html>
