@@ -2,14 +2,21 @@ const btn = document.querySelector("#botao");
 
 btn.addEventListener("click", function (event) {
   event.preventDefault();
-  limpaRetorno();
   calcularRaizesQuadraticas();
+  limpaRetorno();
+
+
 });
 
 function calcularRaizesQuadraticas() {
   let valorA = document.querySelector("#valorA").value;
   let valorB = document.querySelector("#valorB").value;
   let valorC = document.querySelector("#valorC").value;
+
+  if (valorA == "" || valorB == "" || valorC == "") {
+    alert("Os campos não podem ficar vazios")
+    return
+  }
 
   if (valorA === 0) {
     throw new Error(
@@ -21,44 +28,36 @@ function calcularRaizesQuadraticas() {
 
   if (delta < 0) {
     document.querySelector(
-      "#deltaMenorQueZero"
-    ).innerHTML = `<p>O valor de delta é ${delta}<br>não existem raízes reais<br></p>`;
-    $("#elemento1").addClass("msg-retorno");
+      "#mensagem-resultado"
+    ).innerHTML = `<p> a = ${valorA}, b = ${valorB}, c = ${valorC} <br> o valor de delta é ${delta}<br>não existem raízes reais<br></p>`;
+
   } else if (delta === 0) {
     const x1 = -valorB / (2 * valorA);
 
-    document.querySelector("#deltaIgualAZero").innerHTML = `
-        <p>O valor de delta é ${delta}<br>existem duas raízes reais e iguais</p>
-        <p>O valor de X<sub>1</sub> é ${x1}</p>
-        <p>O valor de X<sub>2</sub> é ${x1}</p>
-        `;
-    $("#elemento2").addClass("msg-retorno");
+    document.querySelector("#mensagem-resultado").innerHTML = ` a = ${valorA}, b = ${valorB}, c = ${valorC} <br>
+      <p>o valor de delta é ${delta}<br>existem duas raízes reais e iguais</p>
+      <p>o valor de X<sub>1</sub> é ${x1}</p>
+      <p>o valor de X<sub>2</sub> é ${x1}</p>`;
+
+
   } else {
     const raizDelta = Math.sqrt(delta);
 
     const x1 = (-valorB + raizDelta) / (2 * valorA);
     const x2 = (-valorB - raizDelta) / (2 * valorA);
 
-    document.querySelector("#deltaMaiorQueZero").innerHTML = `
-        <p>O valor de delta é ${delta}<br>existem duas raízes reais e diferentes</p>        
-        <p>O valor de X<sub>1</sub> é ${x1}</p>
-        <p>O valor de X<sub>2</sub> é ${x2}</p>  
-        `;
-    $("#elemento3").addClass("msg-retorno");
+    document.querySelector("#mensagem-resultado").innerHTML = ` a = ${valorA}, b = ${valorB}, c = ${valorC} <br>
+      <p>o valor de delta é ${delta}<br>existem duas raízes reais e diferentes</p>        
+      <p>o valor de X<sub>1</sub> é ${x1}</p>
+      <p>o valor de X<sub>2</sub> é ${x2}</p>
+    `;
   }
 }
 
 function limpaRetorno() {
-  var element1 = document.getElementById("elemento1");
-  element1.classList.remove("msg-retorno");
 
-  var element2 = document.getElementById("elemento2");
-  element2.classList.remove("msg-retorno");
+  document.getElementById('valorA').value = '';
+  document.getElementById('valorB').value = ''
+  document.getElementById('valorC').value = '';
 
-  var element3 = document.getElementById("elemento3");
-  element3.classList.remove("msg-retorno");
-
-  document.querySelector("#deltaMenorQueZero").innerHTML = "";
-  document.querySelector("#deltaIgualAZero").innerHTML = "";
-  document.querySelector("#deltaMaiorQueZero").innerHTML = "";
 }
