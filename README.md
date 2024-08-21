@@ -1,5 +1,5 @@
 <h2>:clipboard: Descrição</h2>
-<p>Função polinomial do segundo grau</p>
+<h2>Função polinomial do segundo grau</h2>
 Uma função polinomial do segundo grau, também conhecida como função quadrática, é uma função matemática.
 Essas funções são fundamentais em diversas áreas da matemática e têm muitas aplicações práticas, como em física (movimento de projéteis), economia, engenharia, entre outras.
 
